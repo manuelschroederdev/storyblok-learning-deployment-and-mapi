@@ -1,1 +1,1 @@
-# The Storyblok Nuxt Ultimate Tutorial: Part 1
+# Storyblok Deployment and Management API example
