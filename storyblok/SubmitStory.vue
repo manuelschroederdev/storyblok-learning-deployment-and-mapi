@@ -39,12 +39,6 @@
         Send
       </button>
     </form>
-    <!-- <pre>{{ stories }}</pre>
-    <ul v-if="stories">
-      <li v-for="story in stories" :key="story.uuid">
-        {{ story.name }}
-      </li>
-    </ul> -->
   </div>
 </template>
 
@@ -57,16 +51,17 @@ const storySlug = ref(null)
 const storyContent = ref(null)
 
 const Storyblok = new StoryblokClient({
-  oauthToken: '',
+  oauthToken: 'your-token-here',
   https: true,
 })
 
 const submitStory = () => {
   Storyblok.post('spaces/186541/stories/', {
+    // replace space ID
     story: {
       name: storyTitle.value,
       slug: storySlug.value,
-      parent_id: 229135019,
+      parent_id: 229135019, // folder ID
       content: {
         component: 'user-story',
         headline: storyTitle.value,
@@ -81,6 +76,8 @@ const submitStory = () => {
       console.log(error)
     })
 }
+
+// if you want to display these stories:
 
 const storyblokApi = useStoryblokApi()
 const stories = ref(null)
