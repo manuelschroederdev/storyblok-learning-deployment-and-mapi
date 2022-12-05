@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     ],
     '@nuxtjs/tailwindcss',
   ],
+  ssr: false,
   runtimeConfig: {
     public: {
       isPreview: process.env.IS_PREVIEW,
