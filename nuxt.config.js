@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     ],
     '@nuxtjs/tailwindcss',
   ],
+  generate: {
+    routes: [
+      '/',
+      '/hello-world'
+    ],
+  },
   runtimeConfig: {
     public: {
       isPreview: process.env.IS_PREVIEW
