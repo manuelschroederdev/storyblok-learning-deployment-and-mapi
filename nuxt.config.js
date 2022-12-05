@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       '/hello-world'
     ],
   },
+  ssr: false,
   runtimeConfig: {
     public: {
       isPreview: process.env.IS_PREVIEW
