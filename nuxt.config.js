@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
   ssr: false,
+  generate: {
+    route: ['/', '/another-story'],
+  },
   runtimeConfig: {
     public: {
       isPreview: process.env.IS_PREVIEW,
