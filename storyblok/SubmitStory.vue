@@ -39,6 +39,12 @@
         Send
       </button>
     </form>
+    <!-- <pre>{{ stories }}</pre>
+    <ul v-if="stories">
+      <li v-for="story in stories" :key="story.uuid">
+        {{ story.name }}
+      </li>
+    </ul> -->
   </div>
 </template>
 
@@ -75,4 +81,14 @@ const submitStory = () => {
       console.log(error)
     })
 }
+
+const storyblokApi = useStoryblokApi()
+const stories = ref(null)
+
+const { data } = await storyblokApi.get('cdn/stories', {
+  version: 'published',
+  starts_with: 'user-submitted-stories',
+})
+
+stories.value = data.stories
 </script>
