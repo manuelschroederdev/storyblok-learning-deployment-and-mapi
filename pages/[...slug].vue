@@ -7,6 +7,5 @@ const story = await useAsyncStoryblok(url, { version: config.isPreview === 'true
 </script>
 
 <template>
-  <pre>{{config.isPreview}}</pre>
   <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
