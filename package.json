@@ -10,5 +10,8 @@
     "@nuxtjs/tailwindcss": "^6.1.3",
     "@storyblok/nuxt": "^4.6.0",
     "nuxt": "^3.0.0"
+  },
+  "dependencies": {
+    "storyblok-js-client": "^4.5.8"
   }
 }
