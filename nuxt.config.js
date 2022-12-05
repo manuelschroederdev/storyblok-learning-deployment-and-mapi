@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   ],
   ssr: false,
   generate: {
-    route: ['/', '/another-story'],
+    routes: ['/', '/another-story'],
   },
   runtimeConfig: {
     public: {
